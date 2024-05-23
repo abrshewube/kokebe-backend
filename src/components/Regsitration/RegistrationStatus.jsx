@@ -60,7 +60,7 @@ const RegistrationStatus = () => {
           </div>
         )}
         {/* Back to Home Button */}
-        <Link to="/index.html" className="block w-full text-center text-white bg-purple-500 hover:bg-purple-600 py-2 rounded-md mt-6 transition duration-300">
+        <Link to="/" className="block w-full text-center text-white bg-purple-500 hover:bg-purple-600 py-2 rounded-md mt-6 transition duration-300">
           <FaArrowLeft className="inline-block mr-2" /> Back to Home
         </Link>
       </div>
