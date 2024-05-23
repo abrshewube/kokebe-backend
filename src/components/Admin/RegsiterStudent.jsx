@@ -10,11 +10,13 @@ const RegisterStudents = () => {
     const fetchStudents = async () => {
       try {
         setLoading(true);
+        console.log('Fetching unregistered students...');
         const unregisteredStudents = await getUnregisteredStudents();
+        console.log('Fetched unregistered students:', unregisteredStudents);
         setStudents(unregisteredStudents);
-        setLoading(false);
       } catch (error) {
         console.error('Error fetching unregistered students:', error.message);
+      } finally {
         setLoading(false);
       }
     };
@@ -23,7 +25,9 @@ const RegisterStudents = () => {
 
   const handleApprove = async (id) => {
     try {
+      console.log(`Approving student with id: ${id}`);
       await approveRegistration(id);
+      console.log(`Approved student with id: ${id}`);
       setStudents((prevStudents) => prevStudents.filter((student) => student._id !== id));
     } catch (error) {
       console.error('Approval failed:', error.message);
@@ -32,7 +36,9 @@ const RegisterStudents = () => {
 
   const handleDeny = async (id) => {
     try {
+      console.log(`Denying student with id: ${id}`);
       await denyRegistration(id);
+      console.log(`Denied student with id: ${id}`);
       setStudents((prevStudents) => prevStudents.filter((student) => student._id !== id));
     } catch (error) {
       console.error('Denial failed:', error.message);

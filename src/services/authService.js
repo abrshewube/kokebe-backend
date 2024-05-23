@@ -118,6 +118,7 @@ const getUnregisteredStudents = async () => {
     }
 
     const data = await response.json();
+    console.log(data)
     return data; // Assuming the response data contains the list of unregistered students
 
   } catch (error) {
