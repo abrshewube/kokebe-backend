@@ -131,7 +131,7 @@ function App() {
   };
 
   return (
-    <div className="mt-16 bg-gray-100 min-h-screen flex items-center mb-16 justify-center">
+    <div className="mt-4 bg-gray-100 min-h-screen flex items-center mb-16 justify-center">
       <div className="max-w-4xl w-full bg-white p-8 rounded shadow-lg">
         <Quiz
           quiz={quiz}
