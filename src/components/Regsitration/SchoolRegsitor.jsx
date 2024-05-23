@@ -89,7 +89,7 @@ const RegistrationForm = () => {
           </div>
           <div className="flex items-center justify-between">
             <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
-            <a href="./regsitration-status.html" onClick={handleViewStatus} className="text-blue-500 hover:underline">View Registration Status</a>
+            <a href="/school/registration" onClick={handleViewStatus} className="text-blue-500 hover:underline">View Registration Status</a>
           </div>
         </form>
         {successMessage && <p className="text-green-500 text-center mt-4">{successMessage}</p>}

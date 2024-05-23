@@ -32,6 +32,7 @@ import AboutPage from './components/Ui/about/About';
 import UserManagement from './components/Admin/Users/UserManagement';
 import ManageNews from './components/Admin/News/MangeNews';
 import NotFound from './components/404/404';
+import RegistrationForm from './components/Regsitration/SchoolRegsitor';
 
 const App = () => {
   const isAuthenticated = !!localStorage.getItem('token'); // Check if token exists in localStorage
@@ -85,6 +86,8 @@ const App = () => {
         <Route path="/grades" element={<AddGradesPage />} />
 
         <Route path="/user-page" element={<Dashboard />} />
+
+        <Route path="/school/regsitration" element={<RegistrationForm />} />
 
         <Route path="*" element={<NotFound />} />
         </Routes>
