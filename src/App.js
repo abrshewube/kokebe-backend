@@ -26,6 +26,7 @@ import BooksPage from './components/Entertaiment/BooksPage';
 import YouTubePage from './components/Entertaiment/YotubePage';
 import BlogPage from './components/Entertaiment/Blog';
 import AddGradesPage from './components/Grade/Grade';
+import Dashboard from './components/Dashboard/Dashboard';
 
 const App = () => {
   const isAuthenticated = !!localStorage.getItem('token'); // Check if token exists in localStorage
@@ -74,6 +75,8 @@ const App = () => {
 
 
         <Route path="/grades" element={<AddGradesPage />} />
+
+        <Route path="/user-page" element={<Dashboard />} />
 
 
         </Routes>
