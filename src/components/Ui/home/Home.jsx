@@ -7,6 +7,7 @@ import img3 from './images/course3.jpg';
 import av1 from './images/avatar1.jpg'
 import school from './image/school.jpg'
 import { FaHeadset, FaUserTie, FaBookReader, FaBook, FaLaptop, FaFlask  } from 'react-icons/fa';
+import TestimonialSection from '../../common/Testimonial';
 const Home = () => {
   return (
     <div class='body'>
@@ -315,121 +316,7 @@ const Home = () => {
 
        
 
-
-    <section class="container testimonials__container mySwiper">
-        <h2>Student's Testimonials</h2>
-        <div class="swiper-wrapper">
-            <article class="testimonial swiper-slide">
-                <div class="avatar">
-                    <img src={av1}/>
-                </div>
-                <div class="testimonial__info">
-                    <h5>Tanya Black</h5>
-                    <small>Student</small>
-                </div>
-                <div class="testimonial__body">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Excepturi, inventore explicabo eveniet   voluptatem dolor labore 
-                        sit quibusdam veniam! Incidunt aliquid culpa cumque. Non modi 
-                        consequuntur voluptatum explicabo placeat error nam.
-                    </p>
-                </div>
-            </article>
-
-            <article class="testimonial swiper-slide">
-                <div class="avatar">
-                    <img src="./images/avatar5.jpg"/>
-                </div>
-                <div class="testimonial__info">
-                    <h5>Jane Doe</h5>
-                    <small>Web Developer</small>
-                </div>
-                <div class="testimonial__body">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Excepturi, inventore explicabo eveniet voluptatem dolor labore 
-                        sit quibusdam veniam! Incidunt aliquid culpa cumque. Non modi 
-                        consequuntur voluptatum explicabo placeat error nam.
-                    </p>
-                </div>
-            </article>
-            
-            <article class="testimonial swiper-slide">
-                <div class="avatar">
-                    <img src="./images/avatar6.jpg"/>
-                </div>
-                <div class="testimonial__info">
-                    <h5>Anne Rose</h5>
-                    <small>Fashion Designer</small>
-                </div>
-                <div class="testimonial__body">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Excepturi, inventore explicabo eveniet voluptatem dolor labore 
-                        sit quibusdam veniam! Incidunt aliquid culpa cumque. Non modi 
-                        consequuntur voluptatum explicabo placeat error nam.
-                    </p>
-                </div>
-            </article>
-            
-            <article class="testimonial swiper-slide">
-                <div class="avatar">
-                    <img src="./images/avatar3.jpg"/>
-                </div>
-                <div class="testimonial__info">
-                    <h5>Edem Quist</h5>
-                    <small>Student</small>
-                </div>
-                <div class="testimonial__body">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Excepturi, inventore explicabo eveniet voluptatem dolor labore 
-                        sit quibusdam veniam! Incidunt aliquid culpa cumque. Non modi 
-                        consequuntur voluptatum explicabo placeat error nam.
-                    </p>
-                </div>
-            </article>
-            
-            <article class="testimonial swiper-slide">
-                <div class="avatar">
-                    <img src="./images/avatar1.jpg"/>
-                </div>
-                <div class="testimonial__info">
-                    <h5>Clara Faya</h5>
-                    <small>Student</small>
-                </div>
-                <div class="testimonial__body">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Excepturi, inventore explicabo eveniet voluptatem dolor labore 
-                        sit quibusdam veniam! Incidunt aliquid culpa cumque. Non modi 
-                        consequuntur voluptatum explicabo placeat error nam.
-                    </p>
-                </div>
-            </article>
-            
-            <article class="testimonial swiper-slide">
-                <div class="avatar">
-                    <img src="./images/avatar2.jpg"/>
-                </div>
-                <div class="testimonial__info">
-                    <h5>Ernest Achiever</h5>
-                    <small>Student</small>
-                </div>
-                <div class="testimonial__body">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Excepturi, inventore explicabo eveniet voluptatem dolor labore 
-                        sit quibusdam veniam! Incidunt aliquid culpa cumque. Non modi 
-                        consequuntur voluptatum explicabo placeat error nam.
-                    </p>
-                </div>
-            </article>
-        </div>
-         <div class="swiper-pagination"></div>
-    </section>
-
+<TestimonialSection/>
 
 
 

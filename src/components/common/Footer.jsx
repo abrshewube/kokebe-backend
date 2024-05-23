@@ -109,7 +109,7 @@ const Footer = () => {
         <div className="mt-8 md:mt-12 text-center text-sm">
           <p>&copy; 2024 Kokebe Tsibah Highschool. All Rights Reserved.</p>
           <p>
-            Designed with <i className="fas fa-heart text-red-500"></i> by Your Team
+            Designed with <i className="fas fa-heart text-red-500"></i> AI Team
           </p>
         </div>
       </div>
