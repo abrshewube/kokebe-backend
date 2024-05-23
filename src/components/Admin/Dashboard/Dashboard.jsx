@@ -8,7 +8,7 @@ const AdminDashboard = () => {
       title: 'Register User',
       description: 'Register new students to the platform.',
       icon: <FaUserPlus className="text-3xl text-blue-500" />,
-      link: '/admin/register-user',
+      link: 'admin/regsiter-user',
     },
     {
       title: 'Create News',
