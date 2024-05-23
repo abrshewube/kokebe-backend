@@ -39,6 +39,12 @@ const AdminDashboard = () => {
       description: 'Set up new clubs.',
       icon: <FaWrench className="text-3xl text-purple-500" />,
       link: '/admin/clubs',
+    },
+    {
+      title: 'Mange Users',
+      description: 'manage user roles.',
+      icon: <FaWrench className="text-3xl text-purple-500" />,
+      link: '/admin/user-management',
     }
   ];
 
