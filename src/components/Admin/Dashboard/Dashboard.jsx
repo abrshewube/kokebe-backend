@@ -1,6 +1,6 @@
 // AdminDashboard.jsx
 import React from 'react';
-import { FaUserPlus, FaNewspaper, FaClipboardList, FaUserShield, FaWrench } from 'react-icons/fa';
+import { FaUserPlus, FaNewspaper, FaClipboardList, FaUserShield, FaWrench,FaTrash } from 'react-icons/fa';
 
 const AdminDashboard = () => {
   const adminResources = [
