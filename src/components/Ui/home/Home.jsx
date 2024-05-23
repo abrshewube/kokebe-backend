@@ -12,6 +12,7 @@ import im1 from './image/school.jpg'
 import im2 from './image/IMG_20240404_121307_936.jpg'
 import im3 from  './image/IMG_20240404_122110_889.jpg'
 import im4 from './image/IMG_20240404_122117_207.jpg'
+import FAQPage from '../../common/FAQ';
 const Home = () => {
   return (
     <div class='body'>
@@ -157,6 +158,7 @@ const Home = () => {
        
 
 <TestimonialSection/>
+<FAQPage/>
 
 
 
