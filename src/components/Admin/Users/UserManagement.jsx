@@ -8,6 +8,7 @@ const UserManagement = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const limit = 10;
 
   useEffect(() => {
@@ -24,6 +25,7 @@ const UserManagement = () => {
       setUsers(response.data);
     } catch (error) {
       console.error('Error fetching users:', error.message);
+      setErrorMessage('Failed to fetch users');
     } finally {
       setLoading(false);
     }
@@ -38,7 +40,7 @@ const UserManagement = () => {
         return user;
       });
       setUsers(updatedUsers);
-  
+
       const token = localStorage.getItem('token');
       await axios.put(
         `${BASE_URL}/users/${userId}/update-role`,
@@ -51,11 +53,9 @@ const UserManagement = () => {
       setTimeout(() => setSuccessMessage(''), 3000);
     } catch (error) {
       console.error('Failed to update user role:', error.message);
-      alert('Failed to update user role');
+      setErrorMessage('Failed to update user role');
     }
   };
-  
-  
 
   const deleteUser = async (userId) => {
     if (window.confirm('Are you sure you want to delete this user?')) {
@@ -69,7 +69,7 @@ const UserManagement = () => {
         fetchUserList();
       } catch (error) {
         console.error('Failed to delete user:', error.message);
-        alert('Failed to delete user');
+        setErrorMessage('Failed to delete user');
       }
     }
   };
@@ -101,6 +101,7 @@ const UserManagement = () => {
       </button>
 
       {successMessage && <div className="success-message">{successMessage}</div>}
+      {errorMessage && <div className="error-message">{errorMessage}</div>}
 
       {loading ? (
         <p>Loading...</p>
@@ -125,7 +126,7 @@ const UserManagement = () => {
                   <td className="border px-4 py-2">
                     <select
                       value={user.role}
-                      onChange={(e) => updateUserRole(user._id, e.target.value)}
+                      onChange={(e) => updateUserRole(user._id, e.target.value)} // Pass newRole directly
                       className="p-2 rounded"
                     >
                       <option value="student">Student</option>
@@ -136,7 +137,6 @@ const UserManagement = () => {
                   </td>
                   <td className="border px-4 py-2">
                     <button
-                      onClick={() => updateUserRole(user._id, document.getElementById(`role_${user._id}`).value)}
                       className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                     >
                       <FaEdit className="inline-block mr-2" />

@@ -17,6 +17,13 @@ const AdminDashboard = () => {
       link: '/admin/create-news',
     },
     {
+      title: 'Delete News', // New card for deleting news
+      description: 'Delete existing news articles.',
+      // eslint-disable-next-line react/jsx-no-undef
+      icon: <FaTrash className="text-3xl text-gray-500" />,
+      link: '/admin/delete-news',
+    },
+    {
       title: 'Club Applications',
       description: 'View and manage club applications.',
       icon: <FaClipboardList className="text-3xl text-green-500" />,
