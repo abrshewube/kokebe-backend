@@ -25,7 +25,7 @@ const RegistrationForm = () => {
       if (response.ok) {
         setSuccessMessage('Registration submitted successfully');
         setTimeout(() => {
-          window.location.href = '/school/status';
+          window.location.href = '/registration/status';
         }, 2000);
       } else {
         console.error('Failed to submit registration:', response.statusText);
