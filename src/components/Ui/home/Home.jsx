@@ -6,7 +6,7 @@ import img2 from './images/course2.jpg';
 import img3 from './images/course3.jpg';
 import av1 from './images/avatar1.jpg'
 import school from './image/school.jpg'
-import { FaHeadset, FaUserTie, FaBookReader } from 'react-icons/fa';
+import { FaHeadset, FaUserTie, FaBookReader, FaBook, FaLaptop, FaFlask  } from 'react-icons/fa';
 const Home = () => {
   return (
     <div class='body'>
@@ -106,6 +106,46 @@ const Home = () => {
         </div>
 
 
+        <div className="container-xxl py-5 bg-gray-100">
+            <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div className="wow animate__animated animate__fadeIn" data-wow-delay="0.1s">
+                        <div className="grid grid-cols-2 gap-4 lg:gap-0">
+                            <div className="text-center lg:text-left">
+                                <img className="img-fluid" src="https://via.placeholder.com/150" alt="Image 1" />
+                            </div>
+                            <div className="text-center lg:text-left">
+                                <img className="img-fluid" src="https://via.placeholder.com/150" alt="Image 2" />
+                            </div>
+                            <div className="text-center lg:text-right">
+                                <img className="img-fluid" src="https://via.placeholder.com/150" alt="Image 3" />
+                            </div>
+                            <div className="text-center lg:text-right">
+                                <img className="img-fluid" src="https://via.placeholder.com/150" alt="Image 4" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="wow animate__animated animate__fadeIn" data-wow-delay="0.5s">
+                        <div>
+                            <h1 className="text-2xl lg:text-4xl font-bold text-gray-800 mb-4">እንኳን ወደ ኮከበ ጽባህ ሁለተኛ ደረጃ ትምህርት ቤት ደህና መጡ ፡፡</h1>
+                            <p className="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae ante nisi. Curabitur sagittis ultrices quam in hendrerit. Sed sit amet mi ultrices, aliquam enim et, malesuada odio.</p>
+                            <ul className="list-disc list-inside text-gray-700 mb-4">
+                                <li className="flex items-center">
+                                    <FaBook className="text-primary mr-2" /> 2 ቤተ መጽሃፍቶችን
+                                </li>
+                                <li className="flex items-center">
+                                    <FaLaptop className="text-primary mr-2" /> 4 የ ኮምፒዩተር ቤተ ሙከራዎችን እና
+                                </li>
+                                <li className="flex items-center">
+                                    <FaFlask className="text-primary mr-2" /> የባዮሎጂ ፤ኬሚስትሪ እና ፊዚክስ ቤተ ሙከራዎችን በውስጡ የያዘ ድንቅ ትምህርት ቤት ነው፡፡
+                                </li>
+                            </ul>
+                            <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <section class="faqs">
         <h2>Frequently Asked Questions</h2>
