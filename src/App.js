@@ -34,6 +34,7 @@ import ManageNews from './components/Admin/News/MangeNews';
 import NotFound from './components/404/404';
 import RegistrationForm from './components/Regsitration/SchoolRegsitor';
 import RegistrationStatus from './components/Regsitration/RegistrationStatus';
+import UnregisteredStudents from './components/Admin/ApproveDny';
 
 const App = () => {
   const isAuthenticated = !!localStorage.getItem('token'); // Check if token exists in localStorage
@@ -73,6 +74,7 @@ const App = () => {
         <Route path="/resources" element={<Resources />} />
         <Route path="/admin/resources" element={<CreateResource/>} />
         <Route path="/admin/clubs" element={<CreateClubs/>} />
+        <Route path="/admin/school-register" element={<UnregisteredStudents/>} />
         <Route path="/admin" element={<AdminDashboard/>} />
 
 

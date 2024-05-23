@@ -1,6 +1,6 @@
 // AdminDashboard.jsx
 import React from 'react';
-import { FaUserPlus, FaNewspaper, FaClipboardList, FaUserShield, FaWrench,FaTrash } from 'react-icons/fa';
+import { FaUserPlus, FaNewspaper, FaClipboardList, FaUserShield, FaWrench,FaTrash,FaSchool } from 'react-icons/fa';
 
 const AdminDashboard = () => {
   const adminResources = [
@@ -52,7 +52,14 @@ const AdminDashboard = () => {
       description: 'manage user roles.',
       icon: <FaWrench className="text-3xl text-purple-500" />,
       link: '/admin/user-management',
+    },
+    {
+      title: 'School Registrations',
+      description: 'Manage registration requests from schools.',
+      icon: <FaSchool className="text-3xl text-blue-500" />,
+      link: '/admin/school-registrations',
     }
+    
   ];
 
   return (
