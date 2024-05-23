@@ -8,6 +8,10 @@ import av1 from './images/avatar1.jpg'
 import school from './image/school.jpg'
 import { FaHeadset, FaUserTie, FaBookReader, FaBook, FaLaptop, FaFlask  } from 'react-icons/fa';
 import TestimonialSection from '../../common/Testimonial';
+import im1 from './image/school.jpg'
+import im2 from './image/IMG_20240404_121307_936.jpg'
+import im3 from  './image/IMG_20240404_122110_889.jpg'
+import im4 from './image/IMG_20240404_122117_207.jpg'
 const Home = () => {
   return (
     <div class='body'>
@@ -113,16 +117,16 @@ const Home = () => {
                     <div className="wow animate__animated animate__fadeIn" data-wow-delay="0.1s">
                         <div className="grid grid-cols-2 gap-4 lg:gap-0">
                             <div className="text-center lg:text-left">
-                                <img className="img-fluid" src="https://via.placeholder.com/150" alt="Image 1" />
+                                <img className="img-fluid" src={im1} alt="Image 1" />
                             </div>
                             <div className="text-center lg:text-left">
-                                <img className="img-fluid" src="https://via.placeholder.com/150" alt="Image 2" />
+                                <img className="img-fluid" src={im2} alt="Image 2" />
                             </div>
                             <div className="text-center lg:text-right">
-                                <img className="img-fluid" src="https://via.placeholder.com/150" alt="Image 3" />
+                                <img className="img-fluid" src={im3} alt="Image 3" />
                             </div>
                             <div className="text-center lg:text-right">
-                                <img className="img-fluid" src="https://via.placeholder.com/150" alt="Image 4" />
+                                <img className="img-fluid"src={im4} alt="Image 4" />
                             </div>
                         </div>
                     </div>
