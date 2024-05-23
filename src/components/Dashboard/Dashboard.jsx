@@ -1,6 +1,6 @@
 // Dashboard.jsx
 import React from 'react';
-import { FaBook, FaVideo, FaBlog, FaTools, FaClipboardCheck, FaCalendar,FaUserGraduate  } from 'react-icons/fa';
+import { FaBook, FaVideo, FaBlog, FaTools, FaClipboardCheck, FaCalendar,FaUserGraduate ,FaInfoCircle  } from 'react-icons/fa';
 
 const Dashboard = () => {
   const resources = [
@@ -46,6 +46,14 @@ const Dashboard = () => {
       icon: <FaUserGraduate className="text-3xl text-purple-500" />, // Replacing the icon
       link: '/school/regsitration',
     },
+
+    {
+      title: 'Check Registration Status',
+      description: 'Check the status of your registration here.',
+      icon: <FaInfoCircle className="text-3xl text-blue-500" />, // Replace with your desired icon
+      link: '/registration/status',
+    },
+    
   ];
 
   return (
