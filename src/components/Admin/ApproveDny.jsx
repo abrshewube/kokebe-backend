@@ -49,15 +49,8 @@ const UnregisteredStudents = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100">
-            {/* Navigation */}
-            <nav className="bg-white shadow-lg py-2 flex justify-between items-center px-4">
-                <button className="text-gray-600 hover:text-gray-800" onClick={() => window.history.back()}>
-                    <FaArrowLeft /> Back
-                </button>
-                {/* Navigation content */}
-            </nav>
-
+        <div className=" bg-gray-100">
+            
             {/* Main content */}
             <div className="container mx-auto px-4 mt-8">
                 <h1 className="text-2xl font-bold mb-4">Unregistered Students</h1>
