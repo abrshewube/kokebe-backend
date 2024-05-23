@@ -1,0 +1,45 @@
+.mainDiv {
+    background-image: url('../../../../public/assets/school.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 200px rgba(26, 21, 21, 0.3); /* Adding shadow to the background image */
+}
+
+
+
+
+
+ h1 {
+    font-size: 5rem; /* Increased font size */
+    margin-bottom: 20px;
+    color: white;
+    margin: 0 auto;
+}
+
+
+p {
+    font-size: 2rem; /* Increased font size */
+    margin-bottom: 30px;
+    color: aliceblue;
+    margin: 0 auto;
+
+}
+
+.content a {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px; /* Increased padding */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.content a:hover {
+    background-color: #45a049;
+}
