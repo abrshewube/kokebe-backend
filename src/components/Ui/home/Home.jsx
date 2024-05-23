@@ -6,7 +6,7 @@ import img2 from './images/course2.jpg';
 import img3 from './images/course3.jpg';
 import av1 from './images/avatar1.jpg'
 import school from './image/school.jpg'
-import Hero from './Hero';
+import { FaHeadset, FaUserTie, FaBookReader } from 'react-icons/fa';
 const Home = () => {
   return (
     <div class='body'>
@@ -76,7 +76,34 @@ const Home = () => {
 <br /><br /><br /><br />
 
 
-
+<div className="container-xxl py-5 mx-auto text-gray-500">
+            <div className="container mx-auto">
+                <h1 className="text-center mb-5 animate__animated animate__fadeInUp text-white-900" data-wow-delay="0.1s">አጫጭር መረጃዎች</h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                        <a className="cat-item rounded p-4 block bg-white shadow-md hover:shadow-lg transition duration-300" href="#">
+                            <FaHeadset className="text-primary mx-auto mb-4 h-12 w-12" />
+                            <h6 className="text-center mb-3">የመምህራን ብዛት</h6>
+                            <p className="text-center mb-0">246 መምህራንን የያዘ ትምህርት ቤት ነው::</p>
+                        </a>
+                    </div>
+                    <div className="wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+                        <a className="cat-item rounded p-4 block bg-white shadow-md hover:shadow-lg transition duration-300" href="#">
+                            <FaUserTie className="text-primary mx-auto mb-4 h-12 w-12" />
+                            <h6 className="text-center mb-3">የተማሪዎች ብዛት</h6>
+                            <p className="text-center mb-0">2958 ተማሪዎችን የያዘ አንጋፋ ትምህርት ቤት ነው፡፡</p>
+                        </a>
+                    </div>
+                    <div className="wow animate__animated animate__fadeInUp" data-wow-delay="0.7s">
+                        <a className="cat-item rounded p-4 block bg-white shadow-md hover:shadow-lg transition duration-300" href="#">
+                            <FaBookReader className="text-primary mx-auto mb-4 h-12 w-12" />
+                            <h6 className="text-center mb-3">የ መማሪያ ክላስ ብዛት </h6>
+                            <p className="text-center mb-0">ሰፋፊ የመማሪያ ክላስ ያሉት ውብ ትምህርት ቤት ነው፡፡</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
