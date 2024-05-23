@@ -17,29 +17,14 @@ const Home = () => {
                 <p>
                 Kokebe tsibah secondary school was founded by king haile Selassile Selassie in the year 
                 1924 Ethiopian calendar. It is the 3rd High school in Ethiopia history it was the home for
-                 many talented and famous people in the country due to the Italian occupation of Ethiopia 
-                 It was turned into a camp for the soldiers in the year 1928 after the Ethiopian
-                  Victory over the Italians it started teaching again and the American government
-                   aids a lot the first director of the school was American too and most of the
-                    teachers were foreigners the territory of the school was presented by one of 
-                    the king's officials kokebe tsibah secondary school was also the first to give 
-                    night classes the first school for both men and women the first school that
-                     teaches woodwork it was the first school be teachers 
-                training center even before kotebe and it used to pay 
-
-                students to  make them focus on academic learning
-                 (most of the people at that time focus on religious learning) 
-                 it was one home for the socialism movement in the country too
-                  due to it's strategic position next to Russian embassy it have
-                   contributed some in the countries politics to  it was school for many artists 
-                   like teshome melaku ,debebe eshetu ,abebe balcha and the first Ethiopia woman
-                    pilot was from our school too.
-                    
+                 many talented and famous people in the country due to the Italian occupation of Ethiopia.
+                 
+                 
 
 
 
                 </p>
-                <a href="courses.html" class="btn btn-primary">Get Started</a>
+                <a href="courses.html" class="btn btn-primary">More About Our School</a>
             </div>
 
             <div class="header__right">

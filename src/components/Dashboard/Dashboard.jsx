@@ -53,13 +53,8 @@ const Dashboard = () => {
       icon: <FaInfoCircle className="text-3xl text-blue-500" />, // Replace with your desired icon
       link: '/registration/status',
     },
-    {
-      title: 'Student Registrations',
-      description: 'Manage registration requests from students.',
-      icon: <FaUserGraduate className="text-3xl text-purple-500" />,
-      link: '/admin/student-registrations',
-    }
-,
+    
+
 {
   title: 'Exam Management',
   description: 'Manage your exams and view results.',
