@@ -6,6 +6,7 @@ import img2 from './images/course2.jpg';
 import img3 from './images/course3.jpg';
 import av1 from './images/avatar1.jpg'
 import school from './image/school.jpg'
+import Hero from './Hero';
 const Home = () => {
   return (
     <div class='body'>
@@ -35,7 +36,9 @@ const Home = () => {
             </div>
         </div>
     </header>
-    <br /><br /><br />
+   
+    <br /><br /><br /><br />
+
       
     <section class="categories">
     <div class="container categories__container">
@@ -66,78 +69,13 @@ const Home = () => {
                 <p class="small-char">Gain insights into financial management, investment strategies, and economic principles to prepare for a successful future in finance.</p>
             </article>
             
-            <article class="category">
-                <span class="category__icon"><i class="uil uil-megaphone"></i></span>
-                <h5>Communication</h5>
-                <p class="small-char">Develop effective communication skills through courses in journalism, public speaking, media studies, and more.</p>
-            </article>
-            
-            <article class="category">
-                <span class="category__icon"><i class="uil uil-music"></i></span>
-                <h5>Music</h5>
-                <p class="small-char">Explore the art of music through performance, theory, composition, and appreciation of various genres and styles.</p>
-            </article>
-            
-            <article class="category">
-                <span class="category__icon"><i class="uil uil-puzzle-piece"></i></span>
-                <h5>Business</h5>
-                <p class="small-char">Gain practical knowledge and skills in entrepreneurship, management, marketing, and business administration.</p>
-            </article>
+           
         </div>
     </div>
 </section>
+<br /><br /><br /><br />
 
-<br /><br /><br /><br /><br /><br /><br />
 
-
-    <section class="courses">
-        <h2>Our Popular Courses</h2>
-        <div class="container courses__container">
-            <article class="course">
-                <div class="course__image">
-                    <img src={img1 } alt='hello'/>
-                </div>
-                <div class="course__info">
-                    <h4>Responsive Social Media Website UI Design</h4>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Rerum ab, nisi iusto nemo aut debitis maiores.
-                    </p>
-                    <a href="courses.html" class="btn btn-primary">Learn More</a>
-                </div>
-            </article>
-
-            <article class="course">
-                <div class="course__image">
-                    <img src={img2}/>
-                </div>
-                <div class="course__info">
-                    <h4>Responsive SmartHome Website Design</h4>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Rerum ab, nisi iusto nemo aut debitis maiores.
-                    </p>
-                    <a href="courses.html" class="btn btn-primary">Learn More</a>
-                </div>
-            </article>
-        
-            <article class="course">
-                <div class="course__image">
-                    <img src={img3}/>
-                </div>
-               <div class="course__info">
-                    <h4>Responsive Admin Dashboard UI Design</h4>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Rerum ab, nisi iusto nemo aut debitis maiores.
-                    </p>
-                    <a href="courses.html" class="btn btn-primary">Learn More</a>
-               </div>
-            </article>        
-        </div>
-    </section>
-
-       
 
 
 
@@ -307,7 +245,7 @@ const Home = () => {
         </div>
     </section>
 
-       
+
        
 
 
