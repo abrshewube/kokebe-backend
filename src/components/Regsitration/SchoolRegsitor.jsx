@@ -25,7 +25,7 @@ const RegistrationForm = () => {
       if (response.ok) {
         setSuccessMessage('Registration submitted successfully');
         setTimeout(() => {
-          window.location.href = 'http://127.0.0.1:5500/frontend/clinet/registration/regsitration-status.html';
+          window.location.href = '/school/status';
         }, 2000);
       } else {
         console.error('Failed to submit registration:', response.statusText);
