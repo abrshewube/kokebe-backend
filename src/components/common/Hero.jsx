@@ -33,6 +33,10 @@ const HeroSection = () => {
 
     lalibela2,
     harar,
+    lalibela2,
+    harar,
+    lalibela2,
+    harar,
     semien2,
    
   ];
