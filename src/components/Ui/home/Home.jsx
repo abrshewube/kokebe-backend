@@ -117,18 +117,19 @@ const Home = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     <div className="wow animate__animated animate__fadeIn" data-wow-delay="0.1s">
                         <div className="grid grid-cols-2 gap-4 lg:gap-0">
-                            <div className="text-center lg:text-left">
-                                <img className="img-fluid" src={im1} alt="Image 1" />
-                            </div>
-                            <div className="text-center lg:text-left">
-                                <img className="img-fluid" src={im2} alt="Image 2" />
-                            </div>
-                            <div className="text-center lg:text-right">
-                                <img className="img-fluid" src={im3} alt="Image 3" />
-                            </div>
-                            <div className="text-center lg:text-right">
-                                <img className="img-fluid"src={im4} alt="Image 4" />
-                            </div>
+                        <div className="flex justify-center lg:justify-start">
+    <img className="img-fluid w-48 h-48" src={im1} alt="Image 1" />
+</div>
+<div className="flex justify-center lg:justify-start">
+    <img className="img-fluid w-48 h-48" src={im2} alt="Image 2" />
+</div>
+<div className="flex justify-center lg:justify-end">
+    <img className="img-fluid w-48 h-48" src={im3} alt="Image 3" />
+</div>
+<div className="flex justify-center lg:justify-end">
+    <img className="img-fluid w-48 h-48" src={im4} alt="Image 4" />
+</div>
+
                         </div>
                     </div>
                     <div className="wow animate__animated animate__fadeIn" data-wow-delay="0.5s">
@@ -160,7 +161,7 @@ const Home = () => {
 <TestimonialSection/>
 <FAQPage/>
 
-
+<br /><br />
 
     </div>
   )

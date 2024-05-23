@@ -6,7 +6,7 @@ const { Panel } = Collapse;
 
 const FAQPage = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto bg-white">
       <div className="max-w-4xl mx-auto">
         <Title level={2} className="text-center mb-8">Frequently Asked Questions</Title>
         <Collapse accordion>
@@ -85,27 +85,8 @@ const FAQPage = () => {
               Yes, we welcome your feedback! Please use the feedback form on our website or email us at [specific email address]. Your input helps us improve the site.
             </Paragraph>
           </Panel>
-          <Panel header="Is the website secure?" key="16">
-            <Paragraph>
-              As a locally hosted website, it is accessible only within the local network, which adds a layer of security. However, basic security measures like secure coding practices have also been implemented.
-            </Paragraph>
-          </Panel>
-          <Panel header="Who maintains the website?" key="17">
-            <Paragraph>
-              The website is maintained by students under the supervision of [specific teacher or administrator].
-            </Paragraph>
-          </Panel>
-          <Panel header="Can I request new features or improvements for the website?" key="18">
-            <Paragraph>
-              Yes, we welcome suggestions! Please use the feedback form on the site or contact us at [specific email address].
-            </Paragraph>
-          </Panel>
-          <Panel header="How can I get help if I have trouble using the website?" key="19">
-            <Paragraph>
-              You can get help by contacting us at [specific email address] or asking a member of the web development team for assistance.
-            </Paragraph>
-          </Panel>
-          {/* Add more questions and answers */}
+          
+          
         </Collapse>
         <Paragraph className="mt-8">
           If you have any additional questions or need further assistance, please don't hesitate to contact us. Our friendly customer service team is here to help!
@@ -115,6 +96,7 @@ const FAQPage = () => {
           Phone: +251-123-456-789
         </Paragraph>
       </div>
+     
     </div>
   );
 };

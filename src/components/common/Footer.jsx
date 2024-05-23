@@ -84,22 +84,22 @@ const Footer = () => {
             <h2 className="text-lg font-semibold mb-2 ">Follow Us</h2>
             <ul className="flex items-center space-x-4">
               <li>
-                <a href="#" className="text-2xl transition duration-300" style={{ color: '#3b5998' }}>
+                <a href="https://www.facebook.com/profile.php?id=61558728275349" className="text-2xl transition duration-300" style={{ color: '#3b5998' }}>
                   <i className="fab fa-facebook"></i>
                 </a>
               </li>
               <li>
-                <a href="#" className="text-2xl transition duration-300" style={{ color: '#1da1f2' }}>
+                <a href="https://x.com/AiKehas1099?t=1FUBn9MJVgEc9FhA_Uv84A&s=09" className="text-2xl transition duration-300" style={{ color: '#1da1f2' }}>
                   <i className="fab fa-twitter"></i>
                 </a>
               </li>
               <li>
-                <a href="#" className="text-2xl transition duration-300" style={{ color: '#c13584' }}>
+                <a href="https://www.instagram.com/ai_of_kehas22?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="text-2xl transition duration-300" style={{ color: '#c13584' }}>
                   <i className="fab fa-instagram"></i>
                 </a>
               </li>
               <li>
-                <a href="#" className="text-2xl transition duration-300" style={{ color: '#0077b5' }}>
+                <a href="https://www.linkedin.com/in/ai-kehas-18634b306?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-2xl transition duration-300" style={{ color: '#0077b5' }}>
                   <i className="fab fa-linkedin"></i>
                 </a>
               </li>
