@@ -78,7 +78,7 @@ const App = () => {
         <Route path="/admin" element={<AdminDashboard/>} />
 
 
-        <Route path="/quiz" element={<Grade10ChemistryMidtermExam />} />
+        <Route path="/student/quiz" element={<Grade10ChemistryMidtermExam />} />
 
         {/* Luxury */}
         <Route path="/entertainment/books" element={<BooksPage />} />
