@@ -90,7 +90,7 @@ const App = () => {
 
         <Route path="/school/regsitration" element={<RegistrationForm />} />
         
-        <Route path="/school/status" element={<RegistrationStatus />} />
+        <Route path="/registration/status" element={<RegistrationStatus />} />
         
 
         <Route path="*" element={<NotFound />} />
