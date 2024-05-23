@@ -1,31 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
+import { FaSignInAlt, FaSignOutAlt, FaBars, FaTimes, FaHome, FaNewspaper, FaInfo, FaUsers, FaUser, FaBook } from 'react-icons/fa';
 
 function Header() {
-  const [isConfirmationOpen, setIsConfirmationOpen] = useState(false); // State to control the confirmation modal
-  const [userPhoto, setUserPhoto] = useState(''); // State to store user photo URL
+  const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
+  const [userPhoto, setUserPhoto] = useState('');
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState(window.location.pathname);
 
-  // Function to handle logout
   const logout = () => {
-    setIsConfirmationOpen(true); // Open the confirmation modal
+    setIsConfirmationOpen(true);
   };
 
-  // Function to confirm logout
   const confirmLogout = () => {
-    // Remove token from localStorage
     localStorage.removeItem("token");
-    // Reload the page to update the UI (if needed)
     window.location.reload();
   };
 
-  // Function to close the confirmation modal
   const closeConfirmation = () => {
     setIsConfirmationOpen(false);
   };
 
   const token = localStorage.getItem("token");
 
-  // Custom function to decode JWT token
   const decodeToken = (token) => {
     try {
       const base64Url = token.split('.')[1];
@@ -40,7 +36,6 @@ function Header() {
     }
   };
 
-  // Decode the token to get the user photo URL
   useEffect(() => {
     if (token) {
       const decodedToken = decodeToken(token);
@@ -50,29 +45,39 @@ function Header() {
     }
   }, [token]);
 
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  const handleLinkClick = (path) => {
+    setActiveLink(path);
+    setIsNavOpen(false);
+  };
+
   return (
     <header className="bg-white shadow-lg py-2">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        {/* Logo/Home Link */}
         <a href="/" className="flex items-center">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9EknRZ1NhPDFU5GCEOiH-ABJnZJPm8TgkbB98HNHiMA&s" alt="Logo" className="h-16 mr-2" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9EknRZ1NhPDFU5GCEOiH-ABJnZJPm8TgkbB98HNHiMA&s" alt="Logo" className=" w-16 h-16 mr-2" />
           <span className="text-lg font-bold text-gray-800">Kokebe Tsibah</span>
         </a>
-        {/* Navigation Links */}
-        <ul className="hidden md:flex space-x-6">
-          <li><a href="/" className="text-lg font-semibold text-gray-800 hover:text-gray-500">Home</a></li>
-          <li><a href="/news" className="text-lg font-semibold text-gray-800 hover:text-gray-500">News</a></li>
-          <li><a href="/about" className="text-lg font-semibold text-gray-800 hover:text-gray-500">About</a></li>
-          <li><a href="/clubs" className="text-lg font-semibold text-gray-800 hover:text-gray-500">Clubs</a></li>
-          {token && <li><a href="/user-page" className="text-lg font-semibold text-gray-800 hover:text-gray-500">Dashboard</a></li>}
-          {token && <li><a href="/resources" className="text-lg font-semibold text-gray-800 hover:text-gray-500">Resources</a></li>}
+        <div className="md:hidden">
+          <button onClick={toggleNav} className="text-gray-800 focus:outline-none">
+            {isNavOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
+          </button>
+        </div>
+        <ul className={`fixed inset-0 bg-white flex flex-col items-center justify-center space-y-6 z-50 md:relative md:flex md:flex-row md:space-x-6 md:space-y-0 ${isNavOpen ? 'block' : 'hidden'} md:block`}>
+          <li><a href="/" className={`text-lg font-semibold hover:text-gray-500 ${activeLink === '/' && 'text-blue-600'}`} onClick={() => handleLinkClick('/')}><FaHome className="inline-block mr-1" /> Home</a></li>
+          <li><a href="/news" className={`text-lg font-semibold hover:text-gray-500 ${activeLink === '/news' && 'text-blue-600'}`} onClick={() => handleLinkClick('/news')}><FaNewspaper className="inline-block mr-1" /> News</a></li>
+          <li><a href="/about" className={`text-lg font-semibold hover:text-gray-500 ${activeLink === '/about' && 'text-blue-600'}`} onClick={() => handleLinkClick('/about')}><FaInfo className="inline-block mr-1" /> About</a></li>
+          <li><a href="/clubs" className={`text-lg font-semibold hover:text-gray-500 ${activeLink === '/clubs' && 'text-blue-600'}`} onClick={() => handleLinkClick('/clubs')}><FaUsers className="inline-block mr-1" /> Clubs</a></li>
+          {token && <li><a href="/user-page" className={`text-lg font-semibold hover:text-gray-500 ${activeLink === '/user-page' && 'text-blue-600'}`} onClick={() => handleLinkClick('/user-page')}><FaUser className="inline-block mr-1" /> Dashboard</a></li>}
+          {token && <li><a href="/resources" className={`text-lg font-semibold hover:text-gray-500 ${activeLink === '/resources' && 'text-blue-600'}`} onClick={() => handleLinkClick('/resources')}><FaBook className="inline-block mr-1" /> Resources</a></li>}
         </ul>
-        {/* Profile */}
         {token ? (
           <div className="flex items-center">
-            {/* User Photo */}
             <img src={userPhoto} alt="User" className="h-10 w-10 rounded-full mr-2" />
-            <span className="text-lg font-semibold text-gray-800 cursor-pointer relative" onClick={logout}>
+            <span className="text-lg font-semibold text-gray-800 cursor-pointer relative">
               <span>{/* Insert username here */}</span>
               <ul className="absolute hidden bg-white shadow-md rounded-md mt-2 py-1 w-24 right-0">
                 <li><button onClick={logout} className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Logout</button></li>
@@ -81,13 +86,12 @@ function Header() {
             <FaSignOutAlt onClick={logout} className="text-gray-800 hover:text-gray-500 ml-2 cursor-pointer" />
           </div>
         ) : (
-          <a href="/auth/login" className="text-gray-800 hover:text-gray-500 ml-6">
+          <a href="/auth/login" className="text-gray-800 hover:text-gray-500 ml-6 flex items-center">
             <FaSignInAlt className="text-3xl" />
-            <span className="text-lg font-semibold text-gray-800 cursor-pointer">Login</span>
+            <span className="text-lg font-semibold text-gray-800 cursor-pointer ml-2">Login</span>
           </a>
         )}
       </div>
-      {/* Logout Confirmation Modal */}
       {isConfirmationOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-25 z-50">
           <div className="bg-white rounded-md p-8">
