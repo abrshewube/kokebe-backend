@@ -60,7 +60,7 @@ const Login = () => {
         {error && <div className="error-message text-red-500 mt-4">{error}</div>}
         {/* Already have an account link */}
         <div className="text-center mt-4">
-          <span>Don't have an account? <a href="#" className="text-blue-500">Regsiter</a></span>
+          <span>Don't have an account? <a href="/auth/register" className="text-blue-500">Regsiter</a></span>
         </div>
       </form>
     </div>

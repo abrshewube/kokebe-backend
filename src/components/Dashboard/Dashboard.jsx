@@ -1,6 +1,6 @@
 // Dashboard.jsx
 import React from 'react';
-import { FaBook, FaVideo, FaBlog, FaTools, FaClipboardCheck } from 'react-icons/fa';
+import { FaBook, FaVideo, FaBlog, FaTools, FaClipboardCheck, FaCalendar } from 'react-icons/fa';
 
 const Dashboard = () => {
   const resources = [
@@ -33,6 +33,12 @@ const Dashboard = () => {
       description: 'Check the status of your club applications.',
       icon: <FaClipboardCheck className="text-3xl text-purple-500" />,
       link: '/clubs/status',
+    },
+    {
+      title: 'School Events',
+      description: 'Check new events avaliable!.',
+      icon: <FaCalendar className="text-3xl text-purple-500" />,
+      link: '/events',
     },
   ];
 

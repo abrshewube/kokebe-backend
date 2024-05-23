@@ -17,7 +17,7 @@ const AssignClubLeader = () => {
 
         // Fetch users directly within the component
         const token = localStorage.getItem('token');
-        const response = await fetch('http://localhost:3000/api/users/all', {
+        const response = await fetch('https://kokebe-tisbah-backend-2.onrender.com/api/users/all', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
