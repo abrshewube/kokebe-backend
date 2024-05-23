@@ -15,7 +15,7 @@ const ManageNews = () => {
   const fetchNews = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`http://localhost:3000/api/school-news?page=${currentPage}`, {
+      const response = await axios.get(`https://kokebe-tisbah-backend-2.onrender.com/api/school-news?page=${currentPage}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setNews(response.data.news);
@@ -28,7 +28,7 @@ const ManageNews = () => {
   const deleteNews = async (newsId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.delete(`http://localhost:3000/api/school-news/${newsId}`, {
+      const response = await axios.delete(`https://kokebe-tisbah-backend-2.onrender.com/api/school-news/${newsId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (response.status === 200) {
