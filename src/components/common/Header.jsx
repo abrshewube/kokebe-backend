@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { FaSignInAlt, FaSignOutAlt, FaBars, FaTimes, FaHome, FaNewspaper, FaInfo, FaUsers, FaUser, FaBook } from 'react-icons/fa';
+import { FaSignInAlt, FaSignOutAlt, FaBars, FaTimes, FaHome, FaNewspaper, FaInfo, FaUsers, FaUser, FaBook, FaUserShield } from 'react-icons/fa';
 
 function Header() {
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
   const [userPhoto, setUserPhoto] = useState('');
+  const [userRole, setUserRole] = useState('');
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(window.location.pathname);
 
@@ -39,8 +40,13 @@ function Header() {
   useEffect(() => {
     if (token) {
       const decodedToken = decodeToken(token);
-      if (decodedToken && decodedToken.profilePicture) {
-        setUserPhoto(decodedToken.profilePicture);
+      if (decodedToken) {
+        if (decodedToken.profilePicture) {
+          setUserPhoto(decodedToken.profilePicture);
+        }
+        if (decodedToken.role) {
+          setUserRole(decodedToken.role);
+        }
       }
     }
   }, [token]);
@@ -58,7 +64,7 @@ function Header() {
     <header className="bg-white shadow-lg py-2">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="/" className="flex items-center">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9EknRZ1NhPDFU5GCEOiH-ABJnZJPm8TgkbB98HNHiMA&s" alt="Logo" className=" w-16 h-16 mr-2" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9EknRZ1NhPDFU5GCEOiH-ABJnZJPm8TgkbB98HNHiMA&s" alt="Logo" className="w-16 h-16 mr-2" />
           <span className="text-lg font-bold text-gray-800">Kokebe Tsibah</span>
         </a>
         <div className="md:hidden">
@@ -73,6 +79,7 @@ function Header() {
           <li><a href="/clubs" className={`text-lg font-semibold hover:text-gray-500 ${activeLink === '/clubs' && 'text-blue-600'}`} onClick={() => handleLinkClick('/clubs')}><FaUsers className="inline-block mr-1" /> Clubs</a></li>
           {token && <li><a href="/user-page" className={`text-lg font-semibold hover:text-gray-500 ${activeLink === '/user-page' && 'text-blue-600'}`} onClick={() => handleLinkClick('/user-page')}><FaUser className="inline-block mr-1" /> Dashboard</a></li>}
           {token && <li><a href="/resources" className={`text-lg font-semibold hover:text-gray-500 ${activeLink === '/resources' && 'text-blue-600'}`} onClick={() => handleLinkClick('/resources')}><FaBook className="inline-block mr-1" /> Resources</a></li>}
+          {token && userRole === 'admin' && <li><a href="/admin" className={`text-lg font-semibold hover:text-gray-500 ${activeLink === '/admin' && 'text-blue-600'}`} onClick={() => handleLinkClick('/admin')}><FaUserShield className="inline-block mr-1" /> Admin</a></li>}
         </ul>
         {token ? (
           <div className="flex items-center">

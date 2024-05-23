@@ -27,6 +27,8 @@ import YouTubePage from './components/Entertaiment/YotubePage';
 import BlogPage from './components/Entertaiment/Blog';
 import AddGradesPage from './components/Grade/Grade';
 import Dashboard from './components/Dashboard/Dashboard';
+import AdminDashboard from './components/Admin/Dashboard/Dashboard';
+import AboutPage from './components/Ui/about/About';
 
 const App = () => {
   const isAuthenticated = !!localStorage.getItem('token'); // Check if token exists in localStorage
@@ -50,6 +52,7 @@ const App = () => {
           <Route path="/clubs/apply" element={<ApplyPage />} />
           <Route path="/clubs/status" element={<GetApplicationStatus />} />
           <Route path="/events" element={<GoogleCalendarEmbed />} />
+          <Route path="/about" element={<AboutPage />} />
 
         {/* Admin */}
         <Route path="/admin/regsiter-user" element={<RegisterStudents />} />
@@ -63,15 +66,15 @@ const App = () => {
         <Route path="/resources" element={<Resources />} />
         <Route path="/admin/resources" element={<CreateResource/>} />
         <Route path="/admin/clubs" element={<CreateClubs/>} />
-
+        <Route path="/admin" element={<AdminDashboard/>} />
 
 
         <Route path="/quiz" element={<Grade10ChemistryMidtermExam />} />
 
         {/* Luxury */}
-        <Route path="/entertaiment/books" element={<BooksPage />} />
-        <Route path="/entertaiment/videos" element={<YouTubePage />} />
-        <Route path="/entertaiment/blogs" element={<BlogPage />} />
+        <Route path="/entertainment/books" element={<BooksPage />} />
+        <Route path="/entertainment/videos" element={<YouTubePage />} />
+        <Route path="/entertainment/blogs" element={<BlogPage />} />
 
 
         <Route path="/grades" element={<AddGradesPage />} />
