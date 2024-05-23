@@ -35,6 +35,7 @@ import NotFound from './components/404/404';
 import RegistrationForm from './components/Regsitration/SchoolRegsitor';
 import RegistrationStatus from './components/Regsitration/RegistrationStatus';
 import UnregisteredStudents from './components/Admin/ApproveDny';
+import Message from './components/common/WaitPage';
 
 const App = () => {
   const isAuthenticated = !!localStorage.getItem('token'); // Check if token exists in localStorage
@@ -84,7 +85,7 @@ const App = () => {
         <Route path="/entertainment/books" element={<BooksPage />} />
         <Route path="/entertainment/videos" element={<YouTubePage />} />
         <Route path="/entertainment/blogs" element={<BlogPage />} />
-
+        <Route path="/wait-page" element={<Message />} />
 
         <Route path="/grades" element={<AddGradesPage />} />
 

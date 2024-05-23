@@ -49,7 +49,7 @@ const Registration = () => {
         await register(form);
         // Show modal popup for approval process
         // Navigate to news or clubs page
-        navigate('/news');
+        navigate('/wait-page');
       }
     } catch (error) {
       setError('Registration failed');
