@@ -40,7 +40,7 @@ const YouTubePage = () => {
   };
 
   const downloadVideo = (videoId) => {
-    window.open(`http://localhost:3000/download?videoId=${videoId}`, '_blank');
+    window.open(`https://kokebe-tisbah-backend-2.onrender.com/download?videoId=${videoId}`, '_blank');
   };
 
   return (
