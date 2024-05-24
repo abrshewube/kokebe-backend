@@ -22,7 +22,7 @@ const ApplyPage = () => {
         return;
       }
       
-      const response = await fetch('http://localhost:3000/api/users/getUserId', {
+      const response = await fetch('https://kokebe-tisbah-backend-2.onrender.com/users/getUserId', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${authToken}`
