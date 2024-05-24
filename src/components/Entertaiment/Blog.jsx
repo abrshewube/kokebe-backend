@@ -13,8 +13,16 @@ const AcademicBlogs = () => {
   const fetchAcademicBlogs = async () => {
     try {
       const response = await axios.get('http://export.arxiv.org/api/query?search_query=all:electron&start=0&max_results=10');
-      setArticles(response.data.feed.entry);
-      setFilteredArticles(response.data.feed.entry);
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(response.data, 'text/xml');
+      const entries = Array.from(xmlDoc.getElementsByTagName('entry')).map((entry) => ({
+        id: entry.getElementsByTagName('id')[0].textContent,
+        title: entry.getElementsByTagName('title')[0].textContent,
+        summary: entry.getElementsByTagName('summary')[0].textContent,
+        link: entry.getElementsByTagName('link')[0].getAttribute('href'),
+      }));
+      setArticles(entries);
+      setFilteredArticles(entries);
     } catch (error) {
       console.error('Error fetching academic blogs:', error);
     }
@@ -29,6 +37,11 @@ const AcademicBlogs = () => {
     setFilteredArticles(filtered);
   };
 
+  const truncateText = (text, length) => {
+    if (text.length <= length) return text;
+    return text.substring(0, length) + '...';
+  };
+
   return (
     <div>
       <div className="bg-gray-800 text-white py-20">
@@ -40,7 +53,7 @@ const AcademicBlogs = () => {
             placeholder="Search articles..."
             value={searchTerm}
             onChange={handleSearch}
-            className="mt-8 border border-gray-300 p-2 rounded-lg focus:outline-none focus:border-blue-500"
+            className="mt-8 border border-gray-300 p-2 rounded-lg focus:outline-none focus:border-blue-500 text-black"
           />
         </div>
       </div>
@@ -51,9 +64,9 @@ const AcademicBlogs = () => {
             <div key={article.id} className="bg-white shadow-md rounded-lg overflow-hidden">
               <div className="p-4">
                 <h3 className="text-xl font-bold mb-2">{article.title}</h3>
-                <p className="text-gray-700 mb-4">{article.summary}</p>
+                <p className="text-gray-700 mb-4">{truncateText(article.summary, 150)}</p>
                 <a
-                  href={article.link.href}
+                  href={article.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-500 flex items-center"

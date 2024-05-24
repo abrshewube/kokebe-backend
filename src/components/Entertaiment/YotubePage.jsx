@@ -77,12 +77,14 @@ const YouTubePage = () => {
             <div className="p-4">
               <h2 className="text-xl font-bold mb-2">{video.snippet.title}</h2>
               <p className="text-gray-700 mb-4">{video.snippet.channelTitle}</p>
-              <button
-                onClick={() => setSelectedVideo(video.id.videoId)}
+              <a
+                href={`https://www.youtube.com/watch?v=${video.id.videoId}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-500 flex items-center mb-2"
               >
                 <FaSearch className="mr-2" /> Watch Video
-              </button>
+              </a>
               <button
                 onClick={() => downloadVideo(video.id.videoId)}
                 className="text-blue-500 flex items-center"
